@@ -1,0 +1,14 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--portfolio-set));
+    margin-top: calc(-1 * var(--portfolio-set));
+}
+
+.gallery__item {
+    flex-basis: calc(100%/3 - var(--portfolio-set));
+    margin-left: var(--portfolio-set);
+    margin-top: var(--portfolio-set);
+    background-color: var(--header-background-color);
+    transition: background-color 250ms var(--animation-timing)
+}
