@@ -12,9 +12,7 @@
 }
 
 .features__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex();
     margin-bottom: 30px;
     width: 270px;
     height: 120px;
@@ -32,6 +30,5 @@
 
 .features__text {
     color: var(--second-text-color);
-    font-size: var(--primary-font-size);
-    line-height: 1.7;
+    @include font (14px, null, 1.7);
 }

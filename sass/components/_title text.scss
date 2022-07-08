@@ -1,0 +1,12 @@
+.title {
+    @include font (36px, 700, 1.16);
+    text-align: center;
+    letter-spacing: var(--primary-letter-spacing);
+    color: var(--main-text-color);
+}
+.caption {
+    @include font (14px, 700, 1.14);
+    letter-spacing: var(--main-letter-spacing);
+    text-transform: uppercase;
+}
+

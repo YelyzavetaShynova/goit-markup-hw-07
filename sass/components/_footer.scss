@@ -5,9 +5,7 @@
 }
 
 .footer__box {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+    @include flex ($ai:baseline);
 }
 
 
@@ -17,10 +15,9 @@
 
 .address__item {
     font-style: normal;
-    font-size: var(--primary-font-size);
-    line-height: 1.71;
+    @include font (14px, null, 1.71);
     color: var(--light-text-color);
-    transition: color 250ms var(--animation-timing);
+    @include transition-one(color);
 
 :not(:last-child) {
         margin-bottom: 9px;
@@ -30,7 +27,7 @@
 
 .address__link {
     color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms var(--animation-timing);
+    @include transition-one(color);
 
     &--white {
             color: var(--light-text-color);
@@ -45,10 +42,5 @@
 .join__caption {
     margin-left: 70px;
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: var(--primary-font-size);
-    line-height: 1.14;
-    letter-spacing: var(--main-letter-spacing);
-    text-transform: uppercase;
     color: var(--header-background-color);
 }

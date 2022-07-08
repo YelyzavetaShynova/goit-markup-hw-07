@@ -8,9 +8,7 @@
 }
 
 .clients__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex();
 }
 
 .clients__item {
@@ -18,7 +16,7 @@
     width: 170px;
     height: 92px;
     cursor: pointer;
-    transition: border-color 250ms var(--animation-timing);
+    @include transition-one(border-color);
 
     &:last-child {
             margin-right: 0;
@@ -33,14 +31,11 @@
 .clients__link {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex();
     color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: color 250ms var(--animation-timing),
-    border-color 250ms var(--animation-timing);
+    @include transition-two(color, border-color);
 
     &:hover,
     &:focus {

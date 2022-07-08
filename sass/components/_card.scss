@@ -1,5 +1,5 @@
 .card {
-    transition: box-shadow 250ms var(--animation-timing);
+    @include transition-one(box-shadow);
 
     &:hover,
     &:focus {
@@ -22,13 +22,14 @@
     top: 0;
     padding: 63px 24px;
     height: 100%;
-    font-size: 18px;
-    line-height: 1.5;
+    @include font (18px, null , 1.5);
+
     letter-spacing: var(--main-letter-spacing);
     color: var(--light-text-color);
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    transition: transform 250ms var(--animation-timing);
+    @include transition-one(transform);
+
 }
 
 .card__desc {
@@ -40,15 +41,12 @@
 
 .card__title {
     margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
+    @include font (18px, 700, 2);
     letter-spacing: 0.06em;
     color: var(--main-text-color);
 }
 
 .card__text {
     color: var(--second-text-color);
-    font-size: 16px;
-    line-height: 1.9;
+    @include font (16px, null, 1.9);
 }

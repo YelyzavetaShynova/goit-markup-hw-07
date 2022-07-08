@@ -14,9 +14,7 @@
     height: 50px;
     padding-left: 16px;
     margin-right: 12px;
-
-    font-size: 16px;
-    line-height: 1.25;
+    @include font (16px, null, 1.25);
     letter-spacing: var(--main-letter-spacing);
 
     color: rgba(255, 255, 255, 0.6);
@@ -25,7 +23,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     outline: none;
-    transition: border-color 250ms var(--animation-timing);
+    @include transition-one(border-color);
 
     &:focus {
         border-color: var(--accent-color);
@@ -33,8 +31,7 @@
 
     &::placeholder {
         color: var(--contact-text-color);
-        font-size: 16px;
-        line-height: 1.25;
+        @include font (16px, null, 1.25);
         letter-spacing: var(--main-letter-spacing);
     }
 }

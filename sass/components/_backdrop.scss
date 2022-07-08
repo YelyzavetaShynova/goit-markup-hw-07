@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     transition: opacity 400ms, visibility 400ms;
+    @include transition-two(opacity, visibility);
 }
 
 .backdrop.is-hidden .modal {

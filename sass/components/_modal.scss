@@ -23,9 +23,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex();
     background: var(--header-background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -37,9 +35,7 @@
 
 .modal-form__title {
     margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
+    @include font (20px, 700, 1.15);
     text-align: center;
     letter-spacing: var(--main-letter-spacing);
     color: var(--main-text-color);
@@ -48,8 +44,7 @@
 .modal-form__field {
     display: block;
     text-align: left;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font (12px, null, 1.16);
     letter-spacing: 0.01em;
     color: #757575;
 }
@@ -67,7 +62,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
-    transition: border-color 250ms var(--animation-timing);
+    @include transition-one(border-color);
 
     &:focus {
             border-color: var(--accent-color);
@@ -79,7 +74,7 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    transition: color 250ms var(--animation-timing);
+    @include transition-one(color);
     
     .modal-form__input:focus+ & {
             fill: var(--accent-color);
@@ -90,8 +85,7 @@
     display: block;
     text-align: left;
     margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font (12px, null, 1.16);
     letter-spacing: 0.01em;
     color: var(--second-text-color);
 }
@@ -100,8 +94,7 @@
     resize: none;
     display: block;
     margin-bottom: 20px;
-    font-size: 12px;
-    line-height: 1.16;
+    @include font (12px, null, 1.16);
     letter-spacing: 0.01em;
     width: 100%;
     height: 120px;
@@ -109,7 +102,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
-    transition: border-color 250ms var(--animation-timing);
+    @include transition-one(border-color);
 
     &::placeholder {
             font-size: 12px;
@@ -124,12 +117,9 @@
 }
 
 .modal-form__policy {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex();
     margin-bottom: 30px;
-    font-size: var(--primary-font-size);
-    line-height: 1.71;
+    @include font (14px, null, 1.71);
     letter-spacing: var(--main-letter-spacing);
     color: var(--second-text-color);
 }
@@ -140,10 +130,8 @@
     border: 2px solid var(--main-text-color);
     border-radius: 3px;
     margin-right: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms var(--animation-timing);
+    @include flex();
+    @include transition-one(background-color);
 
     .modal-form__checkbox:checked+ &{
             background-color: var(--accent-color);

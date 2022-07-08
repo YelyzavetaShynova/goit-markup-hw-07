@@ -10,5 +10,6 @@
     margin-left: var(--portfolio-set);
     margin-top: var(--portfolio-set);
     background-color: var(--header-background-color);
-    transition: background-color 250ms var(--animation-timing)
+    @include transition-one(background-color);
+
 }

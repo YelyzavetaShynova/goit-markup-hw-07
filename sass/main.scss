@@ -1,12 +1,12 @@
-@import "./utils/variables.scss";
+@import "./utils/mixin";
+@import "./utils/variables";
 @import "./utils/reset";
 @import "./utils/common";
 @import "./utils/hidden";
 
 @import "./components/container";
 @import "./components/btn";
-@import "./components/title";
-@import "./components/caption";
+@import "./components/title text";
 @import "./components/logo";
 @import "./components/header";
 @import "./components/hero";
